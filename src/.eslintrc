@@ -1,0 +1,43 @@
+{
+    "parser": "@babel/eslint-parser",
+    //enable and fix issues
+    "parserOptions": {
+        "requireConfigFile": false
+    },
+    "rules": {
+        "no-unused-vars": "warn",
+        "max-len": [
+            "warn",
+            {
+              "code": 120,
+              "tabWidth": 6,
+              "comments": 1000,
+              "ignoreComments": true,
+              "ignoreTrailingComments": true,
+              "ignoreUrls": true,
+              "ignoreStrings": true,
+              "ignoreTemplateLiterals": true,
+              "ignoreRegExpLiterals": true
+            }
+        ],
+        "quotes" : [
+            "warn",
+            "single"
+        ]
+    },
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "settings": {
+        "import/parsers": {
+          "espree": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      }
+}
